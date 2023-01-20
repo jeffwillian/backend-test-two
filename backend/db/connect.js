@@ -3,7 +3,7 @@ require("dotenv").config();
 
 async function main() {
   try {
-    mongoose.set("strictQuery", false);
+    mongoose.set("strictQuery", true);
     mongoose.connect(process.env.MONGO_URI);
     console.log("Connected to mongo");
   } catch (error) {
