@@ -1,5 +1,8 @@
-const router = require("express").Router()
+const router = require("express").Router();
 
-const breweryController = require("../controllers/breweryController");
+//Routes
+const breweryRouter = require("./brewery")
+
+router.use("/", breweryRouter)
 
 module.exports = router;
