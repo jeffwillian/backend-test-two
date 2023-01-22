@@ -1,9 +1,11 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const { Schema } = mongoose;
-
-const brewerySchema = new Schema(
-  {
+const breweryModel = new mongoose.Schema({
+  
+    abv: {
+      type: Number,
+      required: true,
+    },
     name: {
       type: String,
       required: true,
@@ -42,11 +44,7 @@ const brewerySchema = new Schema(
     },
   },
   { timestamps: true }
-);
+  
+  )
 
-const Brewery = mongoose.model("Brewery", brewerySchema);
-
-module.exports = {
-  Brewery,
-  brewerySchema,
-};
+module.exports = breweryModel;
